@@ -18,6 +18,10 @@ export class DataService {
     return this.movieStore.movies;
   }
 
+  cleanSearches(){
+    this.movieStore.movies = [];
+  }
+
   async fetchOmdbapi(searchValue: string): Promise<any> {
     let searchUrl = `${apiUrl}&s=${searchValue}`
     let res = await this.http.get<any>(searchUrl).toPromise();

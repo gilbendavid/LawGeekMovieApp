@@ -25,6 +25,7 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.data.cleanSearches()
   }
 
   async searchAction(value : string){
