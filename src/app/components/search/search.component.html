@@ -1,0 +1,7 @@
+<h1>Search Movie</h1>
+<input #searchVal (keydown.enter)="searchAction(searchVal.value)" type="search" class="mat-elevation-z2" maxlength="30">
+<label *ngIf="isSearchServerError">{{searchServerError}}</label>
+
+
+
+

@@ -1,0 +1,15 @@
+<a [routerLink]="['/movies']">Back To List</a>
+<div *ngIf="movie">
+    <h1>{{movie.Title}}</h1>
+    <img class="center" [src]="movie.Poster">
+
+    <div *ngFor="let item of movie | keyvalue | movieFilter:filterargs">
+        <span class="key">{{item.key}}:</span>
+        <span class="value"> {{item.value}}</span>
+    </div>
+    <div class="key">Ratings:</div>
+    <div *ngFor="let item of movie.Ratings"> 
+        <span class="key">{{item.Source}}:</span>
+        <span class="value"> {{item.Value}}</span>
+    </div>
+</div>

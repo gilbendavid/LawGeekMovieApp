@@ -1,0 +1,19 @@
+:host {
+  height: 100%;
+}
+
+.title-area {
+  background: rgba(123, 102, 240, 0.274);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  height: 5%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.body-area {
+  height: 95%;
+}

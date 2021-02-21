@@ -1,0 +1,16 @@
+<div *ngIf="titles.length>0">
+    <ul>
+        <li *ngFor="let movieTitle of titles; let i = index"
+            (click)="selectMovieIndex(i)"
+        >{{movieTitle}}</li>
+    </ul>
+</div>
+<div class="filter">
+    <label>Filter By Released Year</label>
+    <select type="string" [(ngModel)]="filterReleasedYear" (ngModelChange)="filterResults()" name="Released Dates">
+        <option value="" selected></option>
+        <option *ngFor="let year of releasedYear" [ngValue]="year">
+          {{year}}
+        </option>
+    </select>
+</div>
